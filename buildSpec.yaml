@@ -1,0 +1,20 @@
+version: 0.2
+
+
+
+phases:
+  install:
+    commands:
+      - echo install step
+      - apt-get update -y
+      - apt-get install -y maven
+  pre_build:
+    commands:
+      - echo pre build step
+  build:
+    commands:
+      - echo build step
+  post_build:
+    commands:
+      - echo post-build step
+    
