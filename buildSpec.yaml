@@ -1,20 +1,14 @@
 version: 0.2
 
-
-
 phases:
   install:
     commands:
-      - echo install step
-      - apt-get update -y
-      - apt-get install -y maven
-  pre_build:
-    commands:
-      - echo pre build step
+      - cd db_api
+      - ./deploy.sh -i
   build:
     commands:
-      - echo build step
+      - ./deploy.sh -b
   post_build:
     commands:
-      - echo post-build step
+      - ./deploy.sh -d
     
