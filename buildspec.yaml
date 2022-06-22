@@ -11,5 +11,5 @@ phases:
   post_build:
     commands:
       - ./deploy.sh -d
-      - echo "Deployment completed!"
+      - echo "Deployment done!"
     
