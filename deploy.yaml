@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - cd db_api
+      - ./deploy.sh -i
+  build:
+    commands:
+      - ./deploy.sh -b
+  post_build:
+    commands:
+      - ./deploy.sh -d
+      - echo "Deployment done!"
