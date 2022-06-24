@@ -1,7 +1,10 @@
 version: 0.2
 
 phases:
+
+
   build:
     commands:
-      - echo "Deploy step completed!!"
+      - cd db_api
+      - ./deploy.sh -d
   

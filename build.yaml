@@ -1,6 +1,17 @@
 version: 0.2
 
 phases:
+
+  install:
+    commands:
+      - cd db_api
+      - ./deploy.sh -i
+
   build:
     commands:
-      - echo "Deploy step"
+      - ./deploy.sh -b
+
+artifacts:
+  files:
+    - "**/*" #Todos los archivos que se generan
+  name: BuildArtifact
